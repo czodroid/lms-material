@@ -1,3 +1,20 @@
+1.5.1
+-----
+ 1. Fix 'Play all' and 'Play next' from header.
+ 2. Don't hide 'Interface' from server settings, just hide some options.
+ 3. Fix icon mapping of some icons.
+ 4. Hide jumplist when showing Artists/Album/etc. selection of genre.
+ 5. When listing for Artists, Composers, or Conductors of a genre ask for
+    textkey.
+ 6. Fix colour of active jumplist item.
+ 7. Map application icons to symbolic icons.
+ 8. Show volume overlay when use keyboard to change volume.
+ 9. If a list of items has some with, and some without, images then don't assign
+    a blank image to those without.
+10. Fix SVG icons when in grid.
+11. Dim some buttons if nothing in queue.
+12. Fix rating not showing unless 'landscape'
+
 1.5.0
 -----
  1. When LMS is set to list a multi-CD album as 1 album, then visually split up
@@ -31,9 +48,10 @@
 25. Remove 'Close' button from info view in now-playing - click on toolbar icon
     to close.
 26. Use white icon, in toolbar, for update when using coloured toolbars.
-27. Add 'Back (coloured toolbars)' to theme options.
+27. Add 'Black (coloured toolbars)' to theme options.
 28. Larger play/pause button.
 29. Map more LMS icons to material icons.
+30. Only ask LMS for player-specific 'My Music' entries if there is a player.
 
 1.4.5
 -----

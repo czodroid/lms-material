@@ -72,8 +72,6 @@ function hideClassicSkinElems(page, showAll) {
         if (!showAll) {
             if ('player'==page) {
                 toHide = new Set(['ALARM', 'PLUGIN_DSTM']);
-            } else if ('server'==page) {
-                toHide = new Set(['INTERFACE_SETTINGS']);
             }
         }
         if ('search'==page) {
@@ -197,7 +195,7 @@ Vue.component('lms-iframe-dialog', {
             }
         },
         doAction(act) {
-            this.$confirm(act.text).then(res => {
+            this.$confirm(act.text, {buttonTrueText: act.confirm, buttonFalseText: i18n('Cancel')}).then(res => {
                 if (res) {
                     lmsCommand("server"==this.page ? "" : this.$store.state.player.id, act.cmd);
                     this.close();

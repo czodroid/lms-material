@@ -330,10 +330,13 @@ div.v-subheader {
 }
 
 .image-grid-item-icon {
- display:table-cell;
+ display:block;
  text-align:center;
  vertical-align:middle;
- font-size:calc(100px + (5px * var(--image-grid-factor))) !important;
+ font-size:calc(110px + (5px * var(--image-grid-factor))) !important;
+ margin-bottom:4px;
+ height:calc(135px + (5px * var(--image-grid-factor))) !important;
+ width:calc(135px + (5px * var(--image-grid-factor))) !important;
 }
 
 .grid-no-subtitle {
@@ -457,7 +460,8 @@ div.v-subheader {
 }
 
 .subtoolbar .v-btn__content i.active-btn, .np-info-card-cover div.v-btn__content i.active-btn,
-.np-controls div.v-btn__content i.active-btn, .np-controls-wide div.v-btn__content i.active-btn {
+.np-controls div.v-btn__content i.active-btn, .np-controls-wide div.v-btn__content i.active-btn,
+.lms-jumplist div.active-btn {
  color:var(--active-color) !important;
 }
 
@@ -506,7 +510,7 @@ div.v-subheader {
  height:calc(var(--small-font-size) + 4px) !important;
  line-height:calc(var(--small-font-size) + 4px) !important;
  top:36px;
- right:calc(235px + ((var(--icon-size) - 24px)*5));
+ right:calc(243px + ((var(--icon-size) - 24px)*5));
  width:200px;
  z-index:-1;
  opacity:var(--sub-opacity);
@@ -514,7 +518,7 @@ div.v-subheader {
 }
 
 .vol-fixed-label-noinf {
- right:calc(190px + ((var(--icon-size) - 24px)*5));
+ right:calc(198px + ((var(--icon-size) - 24px)*5));
 }
 
 .v-menu__content {
@@ -558,7 +562,7 @@ div.v-subheader {
 }
 
 .dimmed {
- opacity:0.4 !important;
+ opacity:0.5 !important;
 }
 
 .list-details {
@@ -1095,7 +1099,7 @@ progress {
 }
 
 .pmgr-vol-slider {
- margin-top:-12px;
+ margin-top:-10px;
  margin-left:8px;
  margin-right:8px;
  height:20px;
@@ -1112,8 +1116,8 @@ progress {
 }
 
 .pmgr-vol {
- min-width:82px!important;
- max-width:82px!important;
+ min-width:76px!important;
+ max-width:76px!important;
  padding-top:0px;
  margin-top:-6px;
  height:32px;
@@ -1353,7 +1357,7 @@ div.v-subheader {
  color:var(--dlg-icon-color);
 }
 
-#letterOverlay, #volumeOverlay {
+#letterOverlay, #volumeOverlay, #keyboardVolumeOverlay {
  z-index:2;
  position:fixed;
  left:0;
@@ -1364,6 +1368,10 @@ div.v-subheader {
  pointer-events:none;
  opacity:0.5;
  text-shadow: 0px 0px 8px var(--text-shadow-color);
+}
+
+#volumeOverlay, #keyboardVolumeOverlay {
+ opacity:0.75!important;
 }
 
 .embedded-page {

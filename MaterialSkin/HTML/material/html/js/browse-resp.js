@@ -253,6 +253,7 @@ function parseBrowseResp(data, parent, options, cacheKey) {
                         }
                         i.menu.push(options.pinned.has(i.id) ? UNPIN_ACTION : PIN_ACTION);
                     }
+                    mapIcon(i);
                 } else if (isPlaylists && i.commonParams && i.commonParams.playlist_id) {
                     i.id = "playlist_id:"+i.commonParams.playlist_id;
                 } else if (isRadios) {
@@ -285,7 +286,7 @@ function parseBrowseResp(data, parent, options, cacheKey) {
                     }
                     if (isRadiosTop && i['icon-id']) {
                         if (i.actions && i.actions.go && i.actions.go.params && i.actions.go.params.menu=='language') {
-                            i['icon-id']='language.png';
+                            i['icon-id']='/language.png';
                         }
                         mapIcon(i, "radio");
                     }
@@ -391,11 +392,10 @@ function parseBrowseResp(data, parent, options, cacheKey) {
                             item.image = defArtistImage;
                         } else {
                             // Found an item without and image and not marked as an artist or album, no
-                            // default iamge set - so disable grid usage.
+                            // default image set - so disable grid usage.
                             // See: https://forums.slimdevices.com/showthread.php?109624-Announce-Material-Skin&p=944597&viewfull=1#post944597
                             resp.canUseGrid = false;
-                            // Set a blank image, so as to preserve indentation..
-                            item.image = LMS_BLANK_IMAGE;
+                            break;
                         }
                     }
                 }
